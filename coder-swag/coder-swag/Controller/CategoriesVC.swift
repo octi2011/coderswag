@@ -9,10 +9,13 @@
 import UIKit
 
 class CategoriesVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    //return the number of rows
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return DataService.instance.getCategories().count
     }
     
+    //populate the table using the UITableViewDataSource protocol
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell") as? CategoryCell {
             let category = DataService.instance.getCategories()[indexPath.row]

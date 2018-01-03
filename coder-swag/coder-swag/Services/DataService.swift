@@ -10,7 +10,7 @@ import Foundation
 
 class DataService {
     //Singleton
-    //We created a consant called instance. Static - only one copy in memory, this is
+    //We created a constant called instance. Static - only one copy in memory, this is
     //going to hold our data for the app, no more than one version is needed
     static let instance = DataService()
     
